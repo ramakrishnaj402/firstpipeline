@@ -9,7 +9,8 @@ node {
 	stage ('Run script')
 
 	{
-	 sh 'sh first.sh'}
+	 sh 'first.sh'
+	 }
 
 	stage ('notify')
 
