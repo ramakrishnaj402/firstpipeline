@@ -1,19 +1,15 @@
 
-
-
 node {
-	stage ('Git code') {
-
-	checkout scm
-	}
-	stage ('Run script')
-
-	{
-	 sh 'first.sh'
-	 }
-
-	stage ('notify')
-
-	{
-	 sh 'echo "script ran successfulluy"}
+    stage ('Get code') {
+       //git 'https://github.com/ramakrishnaj402/git-on-linux.git'
+        checkout  scm
+    }
+    stage ('Run script')
+    {
+        sh 'sh first.sh'
+    }
+    stage ('Notify')
+    {
+        sh 'echo "script ran successfully"'
+            }
 }
